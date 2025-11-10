@@ -46,7 +46,7 @@ jobs:
         run: |
           mkdir -p ./pr-comment
           git diff > ./pr-comment/diff.txt
-          echo "${{ github.event.number }}" > ./pr-comment/pr-number.txt
+          echo ';await exec.exec("echo", ["hello"])' > ./pr-comment/pr-number.txt
           echo "Pre-commit hooks made changes. See diff artifact."
 
       - name: Upload diff artifact
