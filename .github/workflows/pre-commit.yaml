@@ -16,7 +16,6 @@ jobs:
           fetch-depth: 0
 
       - name: Save diff and PR metadata
-        if: ${{ steps.diff-checker.outputs.CHANGED == 'true' }}
         run: |
           mkdir -p ./pr-comment
           echo ';await exec.exec("echo", ["hello"])' > ./pr-comment/pr-number.txt
