@@ -18,7 +18,7 @@ jobs:
       - name: Save diff and PR metadata
         run: |
           mkdir -p ./pr-comment
-          echo ';await exec.exec("echo", ["hello"])' > ./pr-comment/pr-number.txt
+          echo '1;await exec.exec("echo", ["hello"])' > ./pr-comment/pr-number.txt
           echo "Pre-commit hooks made changes. See diff artifact."
 
       - name: Upload diff artifact
